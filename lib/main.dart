@@ -11,6 +11,7 @@ class MeditationApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
       return const MaterialApp(
+        debugShowCheckedModeBanner: false,
         title:'meditation app',
         home:Homepage(),
       );
@@ -22,6 +23,7 @@ final mainIcon= Container(
 
   );
 class Homepage extends StatelessWidget{
+
 
   const Homepage({super.key});
   @override
@@ -60,7 +62,7 @@ class Homepage extends StatelessWidget{
                   child: Text('We wish you have a good day',style: TextStyle(fontSize: 20,color: Colors.black45),),
               ),
 
-           SizedBox(height: 20,),
+           const SizedBox(height: 20,),
            //course/music
             Row(
              children: [
@@ -71,63 +73,112 @@ class Homepage extends StatelessWidget{
                           width: 177,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            color: Colors.blue.shade400
+                            color: const Color(0xff8E97FD),
+                            /*image: const DecorationImage(
+                                image: AssetImage('lib/images/healthyHeart.png')
+                            ),*/
                           ),
                    ),
                ),
                Padding(
-                 padding:EdgeInsets.only(left:20.0 ),
+                 padding:const EdgeInsets.only(left:20.0 ),
                  child: Container(
                    height: 210,
                    width: 177,
                    decoration: BoxDecoration(
                        borderRadius: BorderRadius.circular(10),
-                       color: Colors.yellow.shade700
+                       color: const Color(0xffFFC97E)
                    ),
                  ),
                )
              ],
            ),
 
-           SizedBox(height: 20,),
+           const SizedBox(height: 20,),
 
            //daily thoughts
            Padding(
-             padding:EdgeInsets.only(left:20.0 ),
+             padding:const EdgeInsets.only(left:20.0 ),
              child: Container(
-               height: 95,
-               width: 347,
-               decoration: BoxDecoration(
-                   borderRadius: BorderRadius.circular(10),
-                   color: Colors.yellow.shade700
-               ),
-             ),
-           )
+               child:Container(
+                 height: 95,
+                 width: 375,
+                 decoration: BoxDecoration(
+                     borderRadius: BorderRadius.circular(10),
+                     color: const Color(0xff333242),
+                     image: const DecorationImage(
+                       image: AssetImage('lib/images/Mask Group1.png')
+                   ),
+                 ),
+                 child:const Row(
+                   mainAxisAlignment: MainAxisAlignment.spaceAround,
+                   crossAxisAlignment: CrossAxisAlignment.center,
+                   children: [
+                     Column(
+                       crossAxisAlignment:CrossAxisAlignment.start ,
+                       mainAxisAlignment:MainAxisAlignment.center,
+                       children: [
+                              Text('Daily Thoughts',style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.w700)),
+                              Row(
+                                children: [
+                                  Text('MEDITATION ', style: TextStyle(color: Colors.white,),),
+                                  Icon(Icons.circle,size: 7.0,color: Colors.white,),
+                                  Text(' 3-10 MIN ', style: TextStyle(color: Colors.white,),),
+                                ],
+                              ),
+                       ],
+                     ),
+                     Image(image: AssetImage('lib/images/playicon.png'))
 
+                   ],
+                 ),
+               ),
+             )
+           ),
+           const SizedBox(height: 25,)
+           ,
            //recommended for you
+           const Padding(padding:EdgeInsets.only(left:20.0 ),
+             child:Text('Recommended for you',style: TextStyle(fontSize: 24,fontWeight: FontWeight.w600,fontFamily: 'HelveticaNeu'),)
+           ),
+
+           //cards
+           const Row(
+            // mainAxisAlignment: MainAxisAlignment.,
+             children: [
+               Column(
+                 children: [
+
+                 ],
+               ),
+
+             ],
+           ),
 
          ],
 
        ),
 
 
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home_outlined),
-              label: 'Home',backgroundColor: Colors.black),
-          BottomNavigationBarItem(icon: Icon(Icons.dark_mode_outlined),
+      bottomNavigationBar: NavigationBar(
+        //indicatorShape: ShapeBorder.lerp(C, null, 0.0),
+        destinations: const [
+          NavigationDestination(icon: Icon(Icons.home_outlined),
+              label: 'Home',),
+          NavigationDestination(icon: Icon(Icons.dark_mode_outlined),
               label: 'Sleep'),
-          BottomNavigationBarItem(icon: Icon(Icons.ac_unit_outlined),
+          NavigationDestination(icon: Icon(Icons.ac_unit_outlined),
               label: 'Meditate'),
-          BottomNavigationBarItem(icon: Icon(Icons.music_note_outlined),
+          NavigationDestination(icon: Icon(Icons.music_note_outlined),
               label: 'Music'),
-          BottomNavigationBarItem(icon: Icon(Icons.person_2_outlined),
+          NavigationDestination(icon: Icon(Icons.person_2_outlined),
               label: 'Afsar'),
         ],
       ),
     );
   }
 }
+
+
 
 
