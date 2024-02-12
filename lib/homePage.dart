@@ -13,17 +13,22 @@ class Homepage extends StatelessWidget{
     return Scaffold(
       body:Column(
         crossAxisAlignment:  CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
           //head line
           Container(
             alignment:Alignment.center,
-            margin:const EdgeInsets.symmetric(vertical: 50.0, horizontal: 112.0,),
+            margin:const EdgeInsets.only(top: 50,bottom: 40),
             height: 30,
             width: 500,
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+
               children: <Widget>[
-                const Text('Silent',style: TextStyle(fontSize: 20,letterSpacing: 4,),),
+                const Text('Silent',style: TextStyle(fontSize: 20,letterSpacing: 4),),
+                const SizedBox(width: 10,),
                 mainIcon,
+                const SizedBox(width: 10,),
                 const Text('Moon',style: TextStyle(fontSize: 20,letterSpacing: 4,),),
               ],
             ),
@@ -42,7 +47,7 @@ class Homepage extends StatelessWidget{
             child: Text('We wish you have a good day',style: TextStyle(fontSize: 20,color: Colors.black45),),
           ),
 
-          const SizedBox(height: 20,),
+          const SizedBox(height: 30,),
 
           //course/music
           Row(
@@ -69,20 +74,20 @@ class Homepage extends StatelessWidget{
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
-                          Text('Basics', style: TextStyle(color: Colors.white,fontWeight: FontWeight.w700),),
+                          Text('Basics', style: TextStyle(color: Colors.white,fontWeight: FontWeight.w700,fontSize: 18),),
                           Text('COURSE', style: TextStyle(color: Colors.white,),),
-                          SizedBox(height: 50,),
+                          SizedBox(height: 40,),
                           Text('3-10 MIN', style: TextStyle(color: Colors.white,),),
 
                         ],
                       ),
                       ClipRRect(
-                        borderRadius: BorderRadius.circular(30),
+                        borderRadius: BorderRadius.circular(25),
                         child: Container(
-                          padding:const  EdgeInsets.all(10),
+                          padding:const  EdgeInsets.fromLTRB(15,11,14,10),
                           color: Colors.white60,
-                          child: Text('START',
-                            style: TextStyle(fontSize: 15),),
+                          child: const Text('START',
+                            style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold, ),),
                         ),
                       )
                     ],
@@ -112,20 +117,20 @@ class Homepage extends StatelessWidget{
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
-                            Text('Relaxation', style: TextStyle(color: Colors.white,fontWeight: FontWeight.w700),),
-                            Text('MUSIC', style: TextStyle(color: Colors.white,),),
-                            SizedBox(height: 50,),
+                            Text('Relaxation', style: TextStyle(color: Colors.white,fontWeight: FontWeight.w700,fontSize: 18),),
+                            Text('MUSIC', style: TextStyle(color: Colors.white,fontSize: 11),),
+                            SizedBox(height: 40,),
                             Text('3-10 MIN', style: TextStyle(color: Colors.white,),),
 
                           ],
                         ),
                         ClipRRect(
-                          borderRadius: BorderRadius.circular(30),
+                          borderRadius: BorderRadius.circular(25),
                           child: Container(
-                            padding:const  EdgeInsets.all(10),
-                            color: Colors.white60,
-                            child: Text('START',
-                              style: TextStyle(fontSize: 15),),
+                            padding:const  EdgeInsets.fromLTRB(15,11,14,10),
+                            color: Colors.black87,
+                            child: const Text('START',
+                              style: TextStyle(fontSize: 12,color: Colors.white,fontWeight: FontWeight.bold),),
                           ),
                         )
                       ],
@@ -176,12 +181,12 @@ class Homepage extends StatelessWidget{
                 ),
               )
           ),
-          const SizedBox(height: 25,),
+          const SizedBox(height: 40,),
           //recommended for you
           const Padding(padding:EdgeInsets.only(left:20.0 ),
               child:Text('Recommended for you',style: TextStyle(fontSize: 24,fontWeight: FontWeight.w600,fontFamily: 'HelveticaNeu'),)
           ),
-
+          const SizedBox(height: 10,),
           //cards
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
@@ -323,6 +328,7 @@ class Homepage extends StatelessWidget{
       //   ],
       // ),
       bottomNavigationBar: NavigationBar(
+        height: 85,
         indicatorColor: const Color(0xff8E97FD),
         indicatorShape:RoundedRectangleBorder(borderRadius:BorderRadius.circular(30),),
         destinations: const [
