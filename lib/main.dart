@@ -291,23 +291,38 @@ class Homepage extends StatelessWidget{
 
        ),
 
+      bottomNavigationBar: BottomNavigationBar(
+        selectedIconTheme: IconThemeData(size: 20,),
 
-      bottomNavigationBar: NavigationBar(
-        indicatorColor: const Color(0xff8E97FD),
-        indicatorShape:RoundedRectangleBorder(borderRadius:BorderRadius.circular(30),),
-        destinations: const [
-          NavigationDestination(icon: Icon(Icons.home_outlined),
-              label: 'Home',),
-          NavigationDestination(icon: Icon(Icons.dark_mode_outlined),
-              label: 'Sleep'),
-          NavigationDestination(icon: Icon(Icons.ac_unit_outlined),
-              label: 'Meditate'),
-          NavigationDestination(icon: Icon(Icons.music_note_outlined),
-              label: 'Music'),
-          NavigationDestination(icon: Icon(Icons.person_2_outlined),
-              label: 'Afsar'),
-        ],
-      ),
+      items: const [
+        BottomNavigationBarItem(icon: Icon(Icons.home_outlined),
+          label: 'Home',),
+        BottomNavigationBarItem(icon: Icon(Icons.dark_mode_outlined),
+            label: 'Sleep'),
+        BottomNavigationBarItem(icon: Icon(Icons.ac_unit_outlined),
+            label: 'Meditate'),
+        BottomNavigationBarItem(icon: Icon(Icons.music_note_outlined),
+            label: 'Music'),
+        BottomNavigationBarItem(icon: Icon(Icons.person_2_outlined),
+            label: 'Afsar'),
+      ],
+    ),
+      // bottomNavigationBar: NavigationBar(,
+      //   indicatorColor: const Color(0xff8E97FD),
+      //   indicatorShape:RoundedRectangleBorder(borderRadius:BorderRadius.circular(30),),
+      //   destinations: const [
+      //     NavigationDestination(icon: Icon(Icons.home_outlined),
+      //         label: 'Home',),
+      //     NavigationDestination(icon: Icon(Icons.dark_mode_outlined),
+      //         label: 'Sleep'),
+      //     NavigationDestination(icon: Icon(Icons.ac_unit_outlined),
+      //         label: 'Meditate'),
+      //     NavigationDestination(icon: Icon(Icons.music_note_outlined),
+      //         label: 'Music'),
+      //     NavigationDestination(icon: Icon(Icons.person_2_outlined),
+      //         label: 'Afsar'),
+      //   ],
+      // ),
     );
   }
 }
