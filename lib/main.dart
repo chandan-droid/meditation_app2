@@ -63,6 +63,7 @@ class Homepage extends StatelessWidget{
               ),
 
            const SizedBox(height: 20,),
+
            //course/music
             Row(
              children: [
@@ -74,10 +75,37 @@ class Homepage extends StatelessWidget{
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             color: const Color(0xff8E97FD),
-                            /*image: const DecorationImage(
-                                image: AssetImage('lib/images/healthyHeart.png')
-                            ),*/
+                            image: const DecorationImage(
+                                image: AssetImage('lib/images/healthyHeart.png'),
+                                alignment: Alignment.topRight
+                            ),
                           ),
+                     child: Row(
+                       mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          const Column(
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text('Basics', style: TextStyle(color: Colors.white,fontWeight: FontWeight.w700),),
+                              Text('COURSE', style: TextStyle(color: Colors.white,),),
+                              SizedBox(height: 50,),
+                              Text('3-10 MIN', style: TextStyle(color: Colors.white,),),
+                            ],
+                          ),
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(30),
+                            child: Container(
+                              padding: EdgeInsets.all(10),
+                              color: Colors.white60,
+                              child: Text('START',
+                              style: TextStyle(fontSize: 20),),
+                            ),
+                          )
+                        ],
+                     )
+                     ,
                    ),
                ),
                Padding(
