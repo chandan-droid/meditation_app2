@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
+//import 'package:google_fonts/google_fonts.dart';
 
 
-final mainIcon= Container(
-  height: 40,
-  child: Image.asset("lib/images/logo.png"),
 
-);
 class Homepage extends StatelessWidget{
   const Homepage({super.key});
   @override
   Widget build(BuildContext context){
     return Scaffold(
+
       body:Column(
         crossAxisAlignment:  CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -27,7 +25,7 @@ class Homepage extends StatelessWidget{
               children: <Widget>[
                 const Text('Silent',style: TextStyle(fontSize: 20,letterSpacing: 4),),
                 const SizedBox(width: 10,),
-                mainIcon,
+                Image.asset("lib/images/logo.png"),
                 const SizedBox(width: 10,),
                 const Text('Moon',style: TextStyle(fontSize: 20,letterSpacing: 4,),),
               ],
@@ -35,12 +33,11 @@ class Homepage extends StatelessWidget{
           ),
 
           //good morning
-          Padding(
-            padding:const EdgeInsets.only(left:20.0 ),
-            child: Container(
-              child: const Text('Good Morning, Afsar',style: TextStyle(fontSize: 28,fontWeight: FontWeight.bold,color: Colors.black87),),
+          const Padding(
+            padding:EdgeInsets.only(left:20.0 ),
+            child:Text('Good Morning, Afsar',style: TextStyle(fontSize: 28,fontWeight: FontWeight.bold,color: Colors.black87),),
             ),
-          ),
+
           //wish
           const  Padding(
             padding: EdgeInsets.only(left:20.0 ),
@@ -53,11 +50,11 @@ class Homepage extends StatelessWidget{
           Row(
             children: [
               Padding(
-                padding:EdgeInsets.fromLTRB(20, 0, 0, 0),
+                padding:const EdgeInsets.fromLTRB(20, 0, 0, 0),
                 child: Container(
                   height: 210,
                   width: 177,
-                  padding: EdgeInsets.only(bottom: 26),
+                  padding:const  EdgeInsets.only(bottom: 26),
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     color: const Color(0xff8E97FD),
@@ -75,7 +72,7 @@ class Homepage extends StatelessWidget{
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
                           Text('Basics', style: TextStyle(color: Colors.white,fontWeight: FontWeight.w700,fontSize: 18),),
-                          Text('COURSE', style: TextStyle(color: Colors.white,),),
+                          Text('COURSE', style: TextStyle(color: Colors.white,fontSize: 11,letterSpacing: 2),),
                           SizedBox(height: 40,),
                           Text('3-10 MIN', style: TextStyle(color: Colors.white,),),
 
@@ -87,7 +84,7 @@ class Homepage extends StatelessWidget{
                           padding:const  EdgeInsets.fromLTRB(15,11,14,10),
                           color: Colors.white60,
                           child: const Text('START',
-                            style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold, ),),
+                            style: TextStyle(fontSize: 12,color:Color(0xff3F414E),fontWeight: FontWeight.bold, ),),
                         ),
                       )
                     ],
@@ -96,9 +93,9 @@ class Homepage extends StatelessWidget{
                 ),
               ),
               Padding(
-                padding:EdgeInsets.fromLTRB(20, 0, 0, 0),
+                padding:const EdgeInsets.fromLTRB(20, 0, 0, 0),
                 child: Container(
-                    padding: EdgeInsets.only(bottom: 26),
+                    padding: const EdgeInsets.only(bottom: 26),
                     height: 210,
                     width: 177,
                     decoration: BoxDecoration(
@@ -117,10 +114,10 @@ class Homepage extends StatelessWidget{
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
-                            Text('Relaxation', style: TextStyle(color: Colors.white,fontWeight: FontWeight.w700,fontSize: 18),),
-                            Text('MUSIC', style: TextStyle(color: Colors.white,fontSize: 11),),
+                            Text('Relaxation', style: TextStyle(color: Color(0xff3F414E),fontWeight: FontWeight.w700,fontSize: 18),),
+                            Text('MUSIC', style: TextStyle(color: Color(0xff524F53),fontSize: 11,letterSpacing: 2),),
                             SizedBox(height: 40,),
-                            Text('3-10 MIN', style: TextStyle(color: Colors.white,),),
+                            Text('3-10 MIN', style: TextStyle(color: Color(0xff524F53),),),
 
                           ],
                         ),
@@ -146,7 +143,6 @@ class Homepage extends StatelessWidget{
           Padding(
               padding:const EdgeInsets.only(left:20.0 ),
               child: Container(
-                child:Container(
                   height: 95,
                   width: 375,
                   decoration: BoxDecoration(
@@ -168,7 +164,7 @@ class Homepage extends StatelessWidget{
                           Row(
                             children: [
                               Text('MEDITATION ', style: TextStyle(color: Colors.white,),),
-                              Icon(Icons.circle,size: 7.0,color: Colors.white,),
+                              Icon(Icons.circle,size:5,color: Colors.white,),
                               Text(' 3-10 MIN ', style: TextStyle(color: Colors.white,),),
                             ],
                           ),
@@ -179,9 +175,9 @@ class Homepage extends StatelessWidget{
                     ],
                   ),
                 ),
-              )
-          ),
-          const SizedBox(height: 40,),
+              ),
+
+          const SizedBox(height: 20,),
           //recommended for you
           const Padding(padding:EdgeInsets.only(left:20.0 ),
               child:Text('Recommended for you',style: TextStyle(fontSize: 24,fontWeight: FontWeight.w600,fontFamily: 'HelveticaNeu'),)
@@ -196,7 +192,7 @@ class Homepage extends StatelessWidget{
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Padding(padding:EdgeInsets.only(left: 20.0),
+                    Padding(padding:const EdgeInsets.only(left: 20.0),
                       child: Container(
                         height: 113.5,
                         width: 162,
@@ -213,16 +209,16 @@ class Homepage extends StatelessWidget{
                     ),
                     const Padding(
                       padding:EdgeInsets.only(left: 20.0),
-                      child: Text('FOCUS ', style: TextStyle(color: Colors.black,),),
+                      child: Text('Focus ', style: TextStyle(color: Color(0xff3F414E),fontSize: 18,fontWeight: FontWeight.w700),),
 
                     ),
 
                     const Padding(padding:EdgeInsets.only(left: 20.0),
                       child: Row(
                         children: [
-                          Text('MEDITATION ', style: TextStyle(color: Colors.black,),),
-                          Icon(Icons.circle,size: 7.0,color: Colors.black,),
-                          Text(' 3-10 MIN ', style: TextStyle(color: Colors.black,),),
+                          Text('MEDITATION ', style: TextStyle(color: Color(0xffA1A4B2),fontSize: 11),),
+                          Icon(Icons.circle,size: 3.0,color: Color(0xffA1A4B2),),
+                          Text(' 3-10 MIN ', style: TextStyle(color: Color(0xffA1A4B2),fontSize: 11),),
                         ],
                       ),
                     )
@@ -233,12 +229,12 @@ class Homepage extends StatelessWidget{
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Padding(padding:EdgeInsets.only(left: 20.0),
+                    Padding(padding:const EdgeInsets.only(left: 20.0),
                       child: Container(
                         height: 113.5,
                         width: 162,
                         decoration:  BoxDecoration(
-                          color: const Color(0xffAFDBC5),
+                          color: const Color(0xffFEE3B4),
                           borderRadius: BorderRadius.circular(10.0),
                           image: const DecorationImage(
                               image: AssetImage('lib/images/happy_women.png'),
@@ -250,16 +246,16 @@ class Homepage extends StatelessWidget{
                     ),
                     const Padding(
                       padding:EdgeInsets.only(left: 20.0),
-                      child: Text('HAPPINESS', style: TextStyle(color: Colors.black,),),
+                      child: Text('Happiness', style: TextStyle(color: Color(0xff3F414E),fontSize: 18,fontWeight: FontWeight.w700),),
 
                     ),
 
                     const Padding(padding:EdgeInsets.only(left: 20.0),
                       child: Row(
                         children: [
-                          Text('MEDITATION ', style: TextStyle(color: Colors.black,),),
-                          Icon(Icons.circle,size: 7.0,color: Colors.black,),
-                          Text(' 3-10 MIN ', style: TextStyle(color: Colors.black,),),
+                          Text('MEDITATION ', style: TextStyle(color: Color(0xffA1A4B2),fontSize: 11),),
+                          Icon(Icons.circle,size: 3.0,color: Color(0xffA1A4B2),),
+                          Text(' 3-10 MIN ', style: TextStyle(color: Color(0xffA1A4B2),fontSize: 11),),
                         ],
                       ),
                     )
@@ -269,7 +265,7 @@ class Homepage extends StatelessWidget{
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Padding(padding:EdgeInsets.only(left: 20.0),
+                    Padding(padding:const EdgeInsets.only(left: 20.0),
                       child: Container(
                         height: 113.5,
                         width: 162,
@@ -286,16 +282,16 @@ class Homepage extends StatelessWidget{
                     ),
                     const Padding(
                       padding:EdgeInsets.only(left: 20.0),
-                      child: Text('FOCUS ', style: TextStyle(color: Colors.black,),),
+                      child: Text('Focus ', style: TextStyle(color: Color(0xff3F414E),fontSize: 18,fontWeight: FontWeight.w700),),
 
                     ),
 
                     const Padding(padding:EdgeInsets.only(left: 20.0),
                       child: Row(
                         children: [
-                          Text('MEDITATION ', style: TextStyle(color: Colors.black,),),
-                          Icon(Icons.circle,size: 7.0,color: Colors.black,),
-                          Text(' 3-10 MIN ', style: TextStyle(color: Colors.black,),),
+                          Text('MEDITATION ', style: TextStyle(color: Color(0xffA1A4B2),fontSize: 11),),
+                          Icon(Icons.circle,size: 3.0,color: Color(0xffA1A4B2),),
+                          Text(' 3-10 MIN ', style: TextStyle(color: Color(0xffA1A4B2),fontSize: 11),),
                         ],
                       ),
                     )
@@ -310,40 +306,46 @@ class Homepage extends StatelessWidget{
         ],
 
       ),
+       /* bottomNavigationBar: BottomNavigationBar(
+          //type: ,
+          fixedColor: Colors.cyanAccent,
+          selectedIconTheme: IconThemeData(size: 20,fill: 0.7),
 
-      //   bottomNavigationBar: BottomNavigationBar(
-      //     selectedIconTheme: IconThemeData(size: 20,),
-      //
-      //   items: const [
-      //     BottomNavigationBarItem(icon: Icon(Icons.home_outlined),
-      //       label: 'Home',),
-      //     BottomNavigationBarItem(icon: Icon(Icons.dark_mode_outlined),
-      //         label: 'Sleep'),
-      //     BottomNavigationBarItem(icon: Icon(Icons.ac_unit_outlined),
-      //         label: 'Meditate'),
-      //     BottomNavigationBarItem(icon: Icon(Icons.music_note_outlined),
-      //         label: 'Music'),
-      //     BottomNavigationBarItem(icon: Icon(Icons.person_2_outlined),
-      //         label: 'Afsar'),
-      //   ],
-      // ),
-      bottomNavigationBar: NavigationBar(
-        height: 85,
-        indicatorColor: const Color(0xff8E97FD),
-        indicatorShape:RoundedRectangleBorder(borderRadius:BorderRadius.circular(30),),
-        destinations: const [
-          NavigationDestination(icon:ImageIcon(AssetImage('lib/images/home.png')),
-            label: 'Home',),
-          NavigationDestination(icon:ImageIcon(AssetImage('lib/images/bedtime.png')),
-              label: 'Sleep'),
-          NavigationDestination(icon:ImageIcon(AssetImage('lib/images/meditate.png')),
-              label: 'Meditate'),
-          NavigationDestination(icon:ImageIcon(AssetImage('lib/images/music.png')),
-              label: 'Music'),
-          NavigationDestination(icon:ImageIcon(AssetImage('lib/images/profile.png')),
-              label: 'Afsar'),
+         items:  [
+           BottomNavigationBarItem(icon: Icon(Icons.home),
+             //activeIcon: Image.asset('lib/images/logo.png'),
+             backgroundColor: Color(0xff3F414E),
+             label: 'Home',),
+           BottomNavigationBarItem(icon: Icon(Icons.dark_mode_outlined),
+               label: 'Sleep'),
+           BottomNavigationBarItem(icon: Icon(Icons.ac_unit_outlined),
+               label: 'Meditate'),
+           BottomNavigationBarItem(icon: Icon(Icons.music_note_outlined),
+               label: 'Music'),
+           BottomNavigationBarItem(icon: Icon(Icons.person_2_outlined),
+               label: 'Afsar'),
         ],
-      ),
+      ), */
+
+       bottomNavigationBar: NavigationBar(
+            height: 85,
+            selectedIndex: 0,
+
+            indicatorColor: const Color(0xff8E97FD),
+            destinations: const [
+           NavigationDestination(icon:ImageIcon(AssetImage('lib/images/home.png')),
+             label: 'Home',),
+           NavigationDestination(icon:ImageIcon(AssetImage('lib/images/bedtime.png')),
+             label: 'Sleep'),
+           NavigationDestination(icon:ImageIcon(AssetImage('lib/images/meditate.png')),
+             label: 'Meditate'),
+           NavigationDestination(icon:ImageIcon(AssetImage('lib/images/music.png')),
+             label: 'Music'),
+           NavigationDestination(icon:ImageIcon(AssetImage('lib/images/profile.png')),
+             label: 'Afsar'),
+        ],
+    ),
+
     );
   }
 }
