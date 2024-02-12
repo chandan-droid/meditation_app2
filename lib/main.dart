@@ -107,14 +107,45 @@ class Homepage extends StatelessWidget{
                    ),
                ),
                Padding(
-                 padding:const EdgeInsets.only(left:20.0 ),
+                 padding:EdgeInsets.fromLTRB(20, 0, 0, 0),
                  child: Container(
+                     padding: EdgeInsets.only(bottom: 26),
                    height: 210,
                    width: 177,
                    decoration: BoxDecoration(
                        borderRadius: BorderRadius.circular(10),
-                       color: const Color(0xffFFC97E)
+                       color: const Color(0xffFFC97E),
+                     image: const DecorationImage(
+                         image: AssetImage('lib/images/girl_listening_music.png'),
+                         alignment: Alignment.topRight
+                     ),
                    ),
+                     child: Row(
+                       mainAxisAlignment: MainAxisAlignment.spaceAround,
+                       crossAxisAlignment: CrossAxisAlignment.end,
+                       children: [
+                         const Column(
+                           crossAxisAlignment: CrossAxisAlignment.start,
+                           mainAxisAlignment: MainAxisAlignment.end,
+                           children: [
+                             Text('Relaxation', style: TextStyle(color: Colors.white,fontWeight: FontWeight.w700),),
+                             Text('MUSIC', style: TextStyle(color: Colors.white,),),
+                             SizedBox(height: 50,),
+                             Text('3-10 MIN', style: TextStyle(color: Colors.white,),),
+
+                           ],
+                         ),
+                         ClipRRect(
+                           borderRadius: BorderRadius.circular(30),
+                           child: Container(
+                             padding:const  EdgeInsets.all(10),
+                             color: Colors.white60,
+                             child: Text('START',
+                               style: TextStyle(fontSize: 15),),
+                           ),
+                         )
+                       ],
+                     )
                  ),
                )
              ],
@@ -230,7 +261,7 @@ class Homepage extends StatelessWidget{
                       ),
                       const Padding(
                         padding:EdgeInsets.only(left: 20.0),
-                        child: Text('FOCUS ', style: TextStyle(color: Colors.black,),),
+                        child: Text('HAPPINESS', style: TextStyle(color: Colors.black,),),
 
                       ),
 
@@ -291,38 +322,38 @@ class Homepage extends StatelessWidget{
 
        ),
 
-      bottomNavigationBar: BottomNavigationBar(
-        selectedIconTheme: IconThemeData(size: 20,),
-
-      items: const [
-        BottomNavigationBarItem(icon: Icon(Icons.home_outlined),
-          label: 'Home',),
-        BottomNavigationBarItem(icon: Icon(Icons.dark_mode_outlined),
-            label: 'Sleep'),
-        BottomNavigationBarItem(icon: Icon(Icons.ac_unit_outlined),
-            label: 'Meditate'),
-        BottomNavigationBarItem(icon: Icon(Icons.music_note_outlined),
-            label: 'Music'),
-        BottomNavigationBarItem(icon: Icon(Icons.person_2_outlined),
-            label: 'Afsar'),
-      ],
-    ),
-      // bottomNavigationBar: NavigationBar(,
-      //   indicatorColor: const Color(0xff8E97FD),
-      //   indicatorShape:RoundedRectangleBorder(borderRadius:BorderRadius.circular(30),),
-      //   destinations: const [
-      //     NavigationDestination(icon: Icon(Icons.home_outlined),
-      //         label: 'Home',),
-      //     NavigationDestination(icon: Icon(Icons.dark_mode_outlined),
-      //         label: 'Sleep'),
-      //     NavigationDestination(icon: Icon(Icons.ac_unit_outlined),
-      //         label: 'Meditate'),
-      //     NavigationDestination(icon: Icon(Icons.music_note_outlined),
-      //         label: 'Music'),
-      //     NavigationDestination(icon: Icon(Icons.person_2_outlined),
-      //         label: 'Afsar'),
-      //   ],
-      // ),
+    //   bottomNavigationBar: BottomNavigationBar(
+    //     selectedIconTheme: IconThemeData(size: 20,),
+    //
+    //   items: const [
+    //     BottomNavigationBarItem(icon: Icon(Icons.home_outlined),
+    //       label: 'Home',),
+    //     BottomNavigationBarItem(icon: Icon(Icons.dark_mode_outlined),
+    //         label: 'Sleep'),
+    //     BottomNavigationBarItem(icon: Icon(Icons.ac_unit_outlined),
+    //         label: 'Meditate'),
+    //     BottomNavigationBarItem(icon: Icon(Icons.music_note_outlined),
+    //         label: 'Music'),
+    //     BottomNavigationBarItem(icon: Icon(Icons.person_2_outlined),
+    //         label: 'Afsar'),
+    //   ],
+    // ),
+      bottomNavigationBar: NavigationBar(
+        indicatorColor: const Color(0xff8E97FD),
+        indicatorShape:RoundedRectangleBorder(borderRadius:BorderRadius.circular(30),),
+        destinations: const [
+          NavigationDestination(icon:ImageIcon(AssetImage('lib/images/home.png')),
+              label: 'Home',),
+          NavigationDestination(icon:ImageIcon(AssetImage('lib/images/bedtime.png')),
+              label: 'Sleep'),
+          NavigationDestination(icon:ImageIcon(AssetImage('lib/images/meditate.png')),
+              label: 'Meditate'),
+          NavigationDestination(icon:ImageIcon(AssetImage('lib/images/music.png')),
+              label: 'Music'),
+          NavigationDestination(icon:ImageIcon(AssetImage('lib/images/profile.png')),
+              label: 'Afsar'),
+        ],
+      ),
     );
   }
 }
