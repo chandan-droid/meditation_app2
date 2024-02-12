@@ -23,14 +23,10 @@ final mainIcon= Container(
 
   );
 class Homepage extends StatelessWidget{
-
-
   const Homepage({super.key});
   @override
   Widget build(BuildContext context){
     return Scaffold(
-
-
        body:Column(
          crossAxisAlignment:  CrossAxisAlignment.start,
          children: [
@@ -68,10 +64,11 @@ class Homepage extends StatelessWidget{
             Row(
              children: [
                Padding(
-                   padding:EdgeInsets.only(left:20.0 ),
+                   padding:EdgeInsets.fromLTRB(20, 0, 0, 0),
                    child: Container(
                           height: 210,
                           width: 177,
+                          padding: EdgeInsets.only(bottom: 26),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             color: const Color(0xff8E97FD),
@@ -81,26 +78,27 @@ class Homepage extends StatelessWidget{
                             ),
                           ),
                      child: Row(
-                       mainAxisAlignment: MainAxisAlignment.center,
+                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
                           const Column(
-                            crossAxisAlignment: CrossAxisAlignment.end,
-                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.end,
                             children: [
                               Text('Basics', style: TextStyle(color: Colors.white,fontWeight: FontWeight.w700),),
                               Text('COURSE', style: TextStyle(color: Colors.white,),),
                               SizedBox(height: 50,),
                               Text('3-10 MIN', style: TextStyle(color: Colors.white,),),
+                              
                             ],
                           ),
                           ClipRRect(
                             borderRadius: BorderRadius.circular(30),
                             child: Container(
-                              padding: EdgeInsets.all(10),
+                              padding:const  EdgeInsets.all(10),
                               color: Colors.white60,
                               child: Text('START',
-                              style: TextStyle(fontSize: 20),),
+                              style: TextStyle(fontSize: 15),),
                             ),
                           )
                         ],
@@ -163,25 +161,131 @@ class Homepage extends StatelessWidget{
                ),
              )
            ),
-           const SizedBox(height: 25,)
-           ,
+           const SizedBox(height: 25,),
            //recommended for you
            const Padding(padding:EdgeInsets.only(left:20.0 ),
              child:Text('Recommended for you',style: TextStyle(fontSize: 24,fontWeight: FontWeight.w600,fontFamily: 'HelveticaNeu'),)
            ),
 
            //cards
-           const Row(
-            // mainAxisAlignment: MainAxisAlignment.,
-             children: [
-               Column(
-                 children: [
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                // mainAxisAlignment: MainAxisAlignment.,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(padding:EdgeInsets.only(left: 20.0),
+                        child: Container(
+                          height: 113.5,
+                          width: 162,
+                          decoration:  BoxDecoration(
+                            color: const Color(0xffAFDBC5),
+                            borderRadius: BorderRadius.circular(10.0),
+                            image: const DecorationImage(
+                                image: AssetImage('lib/images/focused_man.png'),
+                                alignment: Alignment.centerRight
+                            ),
 
-                 ],
-               ),
+                          ),
+                        ),
+                      ),
+                      const Padding(
+                        padding:EdgeInsets.only(left: 20.0),
+                        child: Text('FOCUS ', style: TextStyle(color: Colors.black,),),
 
-             ],
-           ),
+                      ),
+
+                      const Padding(padding:EdgeInsets.only(left: 20.0),
+                        child: Row(
+                          children: [
+                            Text('MEDITATION ', style: TextStyle(color: Colors.black,),),
+                            Icon(Icons.circle,size: 7.0,color: Colors.black,),
+                            Text(' 3-10 MIN ', style: TextStyle(color: Colors.black,),),
+                          ],
+                        ),
+                      )
+
+                    ],
+                  ),
+
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(padding:EdgeInsets.only(left: 20.0),
+                        child: Container(
+                          height: 113.5,
+                          width: 162,
+                          decoration:  BoxDecoration(
+                            color: const Color(0xffAFDBC5),
+                            borderRadius: BorderRadius.circular(10.0),
+                            image: const DecorationImage(
+                                image: AssetImage('lib/images/happy_women.png'),
+                                alignment: Alignment.centerRight
+                            ),
+
+                          ),
+                        ),
+                      ),
+                      const Padding(
+                        padding:EdgeInsets.only(left: 20.0),
+                        child: Text('FOCUS ', style: TextStyle(color: Colors.black,),),
+
+                      ),
+
+                      const Padding(padding:EdgeInsets.only(left: 20.0),
+                        child: Row(
+                          children: [
+                            Text('MEDITATION ', style: TextStyle(color: Colors.black,),),
+                            Icon(Icons.circle,size: 7.0,color: Colors.black,),
+                            Text(' 3-10 MIN ', style: TextStyle(color: Colors.black,),),
+                          ],
+                        ),
+                      )
+
+                    ],
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Padding(padding:EdgeInsets.only(left: 20.0),
+                        child: Container(
+                          height: 113.5,
+                          width: 162,
+                          decoration:  BoxDecoration(
+                            color: const Color(0xffAFDBC5),
+                            borderRadius: BorderRadius.circular(10.0),
+                            image: const DecorationImage(
+                                image: AssetImage('lib/images/focused_man.png'),
+                                alignment: Alignment.centerRight
+                            ),
+
+                          ),
+                        ),
+                      ),
+                      const Padding(
+                        padding:EdgeInsets.only(left: 20.0),
+                        child: Text('FOCUS ', style: TextStyle(color: Colors.black,),),
+
+                      ),
+
+                      const Padding(padding:EdgeInsets.only(left: 20.0),
+                        child: Row(
+                          children: [
+                            Text('MEDITATION ', style: TextStyle(color: Colors.black,),),
+                            Icon(Icons.circle,size: 7.0,color: Colors.black,),
+                            Text(' 3-10 MIN ', style: TextStyle(color: Colors.black,),),
+                          ],
+                        ),
+                      )
+
+                    ],
+                  ),
+
+                ],
+              ),
+            )
 
          ],
 
@@ -189,7 +293,8 @@ class Homepage extends StatelessWidget{
 
 
       bottomNavigationBar: NavigationBar(
-        //indicatorShape: ShapeBorder.lerp(C, null, 0.0),
+        indicatorColor: const Color(0xff8E97FD),
+        indicatorShape:RoundedRectangleBorder(borderRadius:BorderRadius.circular(30),),
         destinations: const [
           NavigationDestination(icon: Icon(Icons.home_outlined),
               label: 'Home',),
