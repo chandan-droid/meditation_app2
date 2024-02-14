@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-//import 'package:google_fonts/google_fonts.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Homepage extends StatefulWidget{
   const Homepage({super.key});
@@ -27,11 +27,11 @@ class _HomepageState extends State<Homepage>{
               mainAxisAlignment: MainAxisAlignment.center,
 
               children: <Widget>[
-                const Text('Silent',style: TextStyle(fontSize: 20,letterSpacing: 4),),
+                const Text('Silent',style: TextStyle(fontSize: 20,color:Color(0xff3F414E),letterSpacing: 4,fontWeight:FontWeight.w700,fontFamily: 'AirbnbCereal'),),
                 const SizedBox(width: 10,),
                 Image.asset("lib/images/logo.png"),
                 const SizedBox(width: 10,),
-                const Text('Moon',style: TextStyle(fontSize: 20,letterSpacing: 4,),),
+                const Text('Moon',style: TextStyle(fontSize: 20,color:Color(0xff3F414E),letterSpacing: 4,fontWeight:FontWeight.w700,fontFamily: 'AirbnbCereal'),),
               ],
             ),
           ),
@@ -45,7 +45,7 @@ class _HomepageState extends State<Homepage>{
           //wish
           const  Padding(
             padding: EdgeInsets.only(left:20.0 ),
-            child: Text('We wish you have a good day',style: TextStyle(fontSize: 20,color: Colors.black45),),
+            child: Text('We wish you have a good day',style: TextStyle(fontSize: 20,color: Colors.black45,fontWeight: FontWeight.w400,),),
           ),
 
           const SizedBox(height: 30,),
@@ -310,26 +310,6 @@ class _HomepageState extends State<Homepage>{
         ],
 
       ),
-       /* bottomNavigationBar: BottomNavigationBar(
-          //type: ,
-          fixedColor: Colors.cyanAccent,
-          selectedIconTheme: IconThemeData(size: 20,fill: 0.7),
-
-         items:  [
-           BottomNavigationBarItem(icon: Icon(Icons.home),
-             //activeIcon: Image.asset('lib/images/logo.png'),
-             backgroundColor: Color(0xff3F414E),
-             label: 'Home',),
-           BottomNavigationBarItem(icon: Icon(Icons.dark_mode_outlined),
-               label: 'Sleep'),
-           BottomNavigationBarItem(icon: Icon(Icons.ac_unit_outlined),
-               label: 'Meditate'),
-           BottomNavigationBarItem(icon: Icon(Icons.music_note_outlined),
-               label: 'Music'),
-           BottomNavigationBarItem(icon: Icon(Icons.person_2_outlined),
-               label: 'Afsar'),
-        ],
-      ), */
 
        bottomNavigationBar: NavigationBar(
             height: 85,
