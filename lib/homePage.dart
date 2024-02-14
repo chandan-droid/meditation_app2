@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 //import 'package:google_fonts/google_fonts.dart';
 
-
-
-class Homepage extends StatelessWidget{
+class Homepage extends StatefulWidget{
   const Homepage({super.key});
+  @override
+  State<Homepage> createState() => _HomepageState();
+}
+
+class _HomepageState extends State<Homepage>{
+  int _currentIndex=0;
   @override
   Widget build(BuildContext context){
     return Scaffold(
@@ -329,7 +333,12 @@ class Homepage extends StatelessWidget{
 
        bottomNavigationBar: NavigationBar(
             height: 85,
-            selectedIndex: 0,
+            selectedIndex: _currentIndex,
+            onDestinationSelected: (value){
+              setState(() {
+                _currentIndex=value;
+              });
+            },
 
             indicatorColor: const Color(0xff8E97FD),
             destinations: const [
