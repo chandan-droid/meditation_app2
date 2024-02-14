@@ -79,7 +79,7 @@ flutter:
   fonts:
      - family: AirbnbCereal
        fonts:
-         - asset: fonts/AirbnbCereal_W_Lt.otf
+         - asset: fonts/AirbnbCereal_W_Md.otf
 
   #   - family: Trajan Pro
   #     fonts:

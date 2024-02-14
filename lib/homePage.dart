@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+//import 'package:google_fonts/google_fonts.dart';
 
 class Homepage extends StatefulWidget{
   const Homepage({super.key});
@@ -27,11 +27,11 @@ class _HomepageState extends State<Homepage>{
               mainAxisAlignment: MainAxisAlignment.center,
 
               children: <Widget>[
-                const Text('Silent',style: TextStyle(fontSize: 20,color:Color(0xff3F414E),letterSpacing: 4,fontWeight:FontWeight.w700,fontFamily: 'AirbnbCereal'),),
+                const Text('Silent',style: TextStyle(fontSize: 16,color:Color(0xff3F414E),letterSpacing: 4,fontWeight:FontWeight.w700,fontFamily: 'AirbnbCereal'),),
                 const SizedBox(width: 10,),
                 Image.asset("lib/images/logo.png"),
                 const SizedBox(width: 10,),
-                const Text('Moon',style: TextStyle(fontSize: 20,color:Color(0xff3F414E),letterSpacing: 4,fontWeight:FontWeight.w700,fontFamily: 'AirbnbCereal'),),
+                const Text('Moon',style: TextStyle(fontSize: 16,color:Color(0xff3F414E),letterSpacing: 4,fontWeight:FontWeight.w700,fontFamily: 'AirbnbCereal'),),
               ],
             ),
           ),
