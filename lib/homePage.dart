@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+//import 'package:m';
 //import 'package:google_fonts/google_fonts.dart';
 
 class Homepage extends StatefulWidget{
@@ -305,23 +306,31 @@ class _HomepageState extends State<Homepage>{
 
               ],
             ),
-          )
+          ),
+
 
         ],
 
+
+
       ),
+    
+    
 
        bottomNavigationBar: NavigationBar(
             height: 85,
+           // indicatorShape:RoundedRectangleBorder(
+              // side:const BorderSide(color: Colors.white,width:,style:BorderStyle.solid,strokeAlign: BorderSide.strokeAlignCenter),
+              //   borderRadius: BorderRadius.circular(10)) ,
             selectedIndex: _currentIndex,
             onDestinationSelected: (value){
               setState(() {
                 _currentIndex=value;
               });
             },
-
             indicatorColor: const Color(0xff8E97FD),
             destinations: const [
+
            NavigationDestination(icon:ImageIcon(AssetImage('lib/images/home.png')),
              label: 'Home',),
            NavigationDestination(icon:ImageIcon(AssetImage('lib/images/bedtime.png')),
