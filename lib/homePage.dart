@@ -319,9 +319,6 @@ class _HomepageState extends State<Homepage>{
 
        bottomNavigationBar: NavigationBar(
             height: 85,
-           // indicatorShape:RoundedRectangleBorder(
-              // side:const BorderSide(color: Colors.white,width:,style:BorderStyle.solid,strokeAlign: BorderSide.strokeAlignCenter),
-              //   borderRadius: BorderRadius.circular(10)) ,
             selectedIndex: _currentIndex,
             onDestinationSelected: (value){
               setState(() {
